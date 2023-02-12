@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.main-nav {
+  position: relative;
+  width: 100%;
+  height: 10rem;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.9);
+  display: grid;
+
+  grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+}
+.logo {
+  display: grid;
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+
+  grid-column: 1/2;
+}
+
+.menu-link {
+  grid-column: 3/4;
+}
+
+.menu-link ul {
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.facebook {
+  color: #3b5998;
+}
+
+.instagram {
+  color: #c32aa3;
+}
+
+.youtube {
+  color: #3b5998;
+}
+.social-media {
+  grid-column: 4/5;
+}
+.social-media ul {
+  margin-left: 50px;
+  height: 10rem;
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+
+  align-items: center;
+  justify-content: flex-end;
+}
+.social-media ul li:first-child {
+  grid-column: 2/3;
+}
+.social-media ul li {
+  text-align: right;
+}
+@media (max-width: 900px) {
+  .social-media {
+    display: none;
+  }
+  .menu-link {
+    grid-column: 2/4;
+  }
+}
+.hamburger {
+  display: none;
+}
+@media (max-width: 500px) {
+  .menu-link {
+    display: none;
+  }
+  .mobile-menu {
+    grid-column: 0/5;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+  }
+  .mobile-menu {
+    background-color: white;
+    height: 20rem;
+    margin-top: 10rem;
+    display: grid;
+
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+
+    transform-origin: top;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+
+  .mobile-menu ul {
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: start;
+  }
+  .hamburger {
+    display: grid;
+    color: slategrey;
+    font-size: 3rem;
+    grid-column: 5/6;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.main-section {
+  height: 80vh;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.red {
+  color: red;
+}
